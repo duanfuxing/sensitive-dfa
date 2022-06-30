@@ -156,7 +156,7 @@ class SensitiveDfa
      */
     public function replace($content, $replaceChar = '', $sTag = '', $eTag = '', $matchType = 1)
     {
-        if (mb_strlen(trim($content))) {
+        if (!mb_strlen(trim($content))) {
             throw new \Exception('请填写检测的内容');
         }
 
